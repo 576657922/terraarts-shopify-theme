@@ -93,7 +93,7 @@
                   "type": "text",
                   "name": "Heading",
                   "settings": {
-                    "text": "<h2><em>Introducing</em></h2>",
+                    "text": "<h2><em>Venetian Glass &amp; World Handcrafts</em></h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -118,7 +118,7 @@
                 "text_m9AcWC": {
                   "type": "text",
                   "settings": {
-                    "text": "<h1>Our Newest Arrivals </h1>",
+                    "text": "<h1>ヴェネチアの光を、暮らしのなかに</h1>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -145,37 +145,10 @@
                 "text_nptTQe",
                 "text_m9AcWC"
               ]
-            },
-            "text_ebNxhf": {
-              "type": "text",
-              "name": "Text",
-              "settings": {
-                "text": "<p>Bring order to the chaos. When all your tech essentials have a dedicated spot on your desk, you don’t have to waste any time searching for them. </p>",
-                "width": "fit-content",
-                "max_width": "none",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-primary--family)",
-                "font_size": "",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
             }
           },
           "block_order": [
-            "group_U86Qji",
-            "text_ebNxhf"
+            "group_U86Qji"
           ]
         }
       },
@@ -196,7 +169,7 @@
         "vertical_alignment_flex_direction_column": "flex-end",
         "gap": 16,
         "section_width": "page-width",
-        "section_height": "large",
+        "section_height": "medium",
         "section_height_custom": 50,
         "color_scheme": "scheme-5",
         "toggle_overlay": true,
@@ -249,7 +222,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<h3>Make Your Workspace Yours</h3>",
+                "text": "<h3>おすすめのアイテム</h3>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -445,137 +418,6 @@
         "padding-block-end": 64
       }
     },
-    "media_with_content_LfPdEJ": {
-      "type": "media-with-content",
-      "blocks": {
-        "media": {
-          "type": "_media-without-appearance",
-          "static": true,
-          "settings": {
-            "media_type": "video",
-            "video_loop": true,
-            "video_autoplay": true,
-            "image_position": "cover",
-            "video_position": "cover"
-          },
-          "blocks": {}
-        },
-        "content": {
-          "type": "_content-without-appearance",
-          "static": true,
-          "settings": {
-            "horizontal_alignment_flex_direction_column": "center",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 24
-          },
-          "blocks": {
-            "image_y4ApqF": {
-              "type": "image",
-              "name": "t:names.image",
-              "settings": {
-                "image_ratio": "adapt",
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "text_Hf79zK": {
-              "type": "text",
-              "name": "t:names.heading",
-              "settings": {
-                "text": "<h2>Productivity Essentials</h2>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h3",
-                "font": "var(--font-primary--family)",
-                "font_size": "",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "text_jxGhdJ": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Objects that partner with your digital tools so you can focus on your most important work.</p>",
-                "width": "fit-content",
-                "max_width": "narrow",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-primary--family)",
-                "font_size": "",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "button_zg4nUF": {
-              "type": "button",
-              "settings": {
-                "label": "Shop Now",
-                "link": "shopify://collections/all",
-                "open_in_new_tab": false,
-                "style_class": "button",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "image_y4ApqF",
-            "text_Hf79zK",
-            "text_jxGhdJ",
-            "button_zg4nUF"
-          ]
-        }
-      },
-      "name": "t:names.media_with_text",
-      "settings": {
-        "media_position": "left",
-        "media_width": "medium",
-        "media_height": "50svh",
-        "section_width": "page-width",
-        "extend_media": true,
-        "color_scheme": "scheme-41dbb9c3-0866-4036-9494-aa0e1c1cedda",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
-    },
     "collection_list_xpBxCm": {
       "type": "collection-list",
       "blocks": {
@@ -622,7 +464,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<h2>Shop by Collection</h2>",
+                "text": "<h2>コレクションから探す</h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -740,7 +582,6 @@
   "order": [
     "hero_iLBwPd",
     "product_list_EDUBdR",
-    "media_with_content_LfPdEJ",
     "collection_list_xpBxCm"
   ]
 }

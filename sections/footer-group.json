@@ -40,7 +40,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<p>Join our Newsletter — Get Updates, Offers and Invites.</p>",
+                "text": "<p>ニュースレターに登録 — 新着情報やお得なご案内をお届けします。</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -78,7 +78,7 @@
                 "input_type_preset": "paragraph",
                 "style_class": "button",
                 "display_type": "arrow",
-                "label": "Sign up",
+                "label": "登録する",
                 "integrated_button": false,
                 "button_type_preset": "paragraph",
                 "padding-block-start": 0,
@@ -213,7 +213,7 @@
             "text_jBr8nr": {
               "type": "text",
               "settings": {
-                "text": "<p>Stay Connected</p>",
+                "text": "<p>つながる</p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",

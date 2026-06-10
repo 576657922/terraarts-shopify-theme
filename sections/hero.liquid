@@ -327,7 +327,18 @@
   {{ media_slot_2 }}
 
   {% if media_count == 0 %}
-    {{ 'hero-apparel-1' | placeholder_svg_tag: 'hero__media' }}
+    {%- comment -%} Terra Arts: brand hero from theme assets when no image is set in the editor {%- endcomment -%}
+    <div class="{{ media_wrapper_desktop_class }}">
+      <img
+        src="{{ 'hero-venetian.jpg' | asset_url }}"
+        alt="ヴェネチアン・ガラス"
+        class="hero__media"
+        width="2880"
+        height="1621"
+        loading="eager"
+        fetchpriority="high"
+      >
+    </div>
   {%- endif -%}
 {% endcapture %}
 
