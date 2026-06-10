@@ -1,0 +1,16 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Shopify CLI
+.shopify/
+
+# Dependencies / build
+node_modules/
+*.log
+
+# Local env / secrets (safety net — never commit tokens)
+.env
+.env.*
+*.pem
+*.key
