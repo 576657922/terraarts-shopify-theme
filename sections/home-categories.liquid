@@ -18,7 +18,8 @@
       {%- assign tiles = 'cat-glass.jpg|グラス,cat-accessory.jpg|アクセサリー,cat-pen.jpg|ガラスペン,cat-watch.jpg|腕時計' | split: ',' -%}
       {%- for tile in tiles -%}
         {%- assign parts = tile | split: '|' -%}
-        <a class="home-cats__tile" href="{{ all_url }}">
+        {%- assign cat = collections[parts[1]] -%}
+        <a class="home-cats__tile" href="{{ cat.url | default: all_url }}">
           <img
             class="home-cats__img"
             src="{{ parts[0] | asset_url }}"
