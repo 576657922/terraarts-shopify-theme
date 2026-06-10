@@ -6,7 +6,20 @@
   endif
 %}
 
-{% render 'media', unset_image_tag: unset_image_tag %}
+{%- if block.settings.media_type == 'image' and block.settings.image == blank -%}
+  {%- comment -%} Terra Arts: brand fallback image when none set in editor (e.g. footer newsletter) {%- endcomment -%}
+  <img
+    src="{{ 'cat-glass.jpg' | asset_url }}"
+    alt=""
+    class="media"
+    width="960"
+    height="1200"
+    loading="lazy"
+    style="width:100%;height:clamp(260px,30vw,420px);object-fit:cover;display:block;"
+  >
+{%- else -%}
+  {% render 'media', unset_image_tag: unset_image_tag %}
+{%- endif -%}
 
 {% schema %}
 {

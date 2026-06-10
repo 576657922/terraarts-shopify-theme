@@ -6,8 +6,7 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */
-{
+ */{
   "type": "footer",
   "name": "Footer",
   "sections": {
@@ -99,7 +98,7 @@
       "settings": {
         "media_position": "left",
         "media_width": "medium",
-        "media_height": "auto",
+        "media_height": "32svh",
         "section_width": "full-width",
         "extend_media": true,
         "color_scheme": "scheme-e1e09ff5-6396-47cd-ad7a-c05470cf2a2e",
