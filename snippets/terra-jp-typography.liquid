@@ -1,0 +1,23 @@
+{%- comment -%}
+  Terra Arts: 日文 webfont 加载 + 日系微排版。
+  拉丁字母/数字仍用主题原字体(Instrument),日文落到 Noto(见 theme-styles-variables 的字体栈)。
+{%- endcomment -%}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;600&display=swap"
+  rel="stylesheet"
+>
+<style>
+  body {
+    /* 比例字距:收紧假名/汉字与约物的多余空隙 */
+    font-feature-settings: "palt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  /* 日系正文:行距更松、字距微开 */
+  :is(p, li, dd, blockquote) {
+    line-height: 1.75;
+    letter-spacing: 0.04em;
+  }
+</style>
