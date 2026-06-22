@@ -20,7 +20,8 @@
     {%- endif -%}
     {%- if s.button_label != blank -%}
       <a class="home-spotlight__btn" href="{{ s.button_link | default: routes.all_products_collection_url }}">
-        {{ s.button_label }}
+        <span class="home-spotlight__btn-text">{{ s.button_label }}</span>
+        <span class="home-spotlight__arrow" aria-hidden="true">→</span>
       </a>
     {%- endif -%}
   </div>
@@ -28,56 +29,67 @@
 
 {% stylesheet %}
   .home-spotlight {
-    background-color: var(--sp-bg, #e2682e);
+    background-color: var(--sp-bg, #d97a40);
     color: #fff;
-    padding-block: var(--sp-pt, 72px) var(--sp-pb, 72px);
+    padding-block: var(--sp-pt, 104px) var(--sp-pb, 104px);
     text-align: center;
   }
   .home-spotlight__inner {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 18px;
+    gap: 26px;
+    max-width: 56rem;
+    margin-inline: auto;
   }
   .home-spotlight__eyebrow {
     font-family: var(--font-body--family, sans-serif);
-    font-size: .75rem;
-    letter-spacing: .28em;
+    font-size: .6875rem;
+    letter-spacing: .36em;
     text-transform: uppercase;
-    opacity: .9;
+    opacity: .7;
   }
   .home-spotlight__heading {
     font-family: var(--font-heading--family, serif);
     font-weight: 500;
-    font-size: clamp(1.6rem, 3.4vw, 2.75rem);
-    line-height: 1.4;
+    font-size: clamp(1.75rem, 3.6vw, 3rem);
+    line-height: 1.6;
+    letter-spacing: .05em;
     margin: 0;
-    max-width: 20em;
+    max-width: 17em;
   }
   .home-spotlight__text {
     font-family: var(--font-body--family, sans-serif);
-    font-size: clamp(.95rem, 1.1vw, 1.0625rem);
-    line-height: 1.9;
-    letter-spacing: .04em;
+    font-size: clamp(.9375rem, 1vw, 1.0625rem);
+    line-height: 2;
+    letter-spacing: .06em;
     margin: 0;
-    max-width: 38em;
-    opacity: .96;
+    max-width: 32em;
+    opacity: .9;
   }
   .home-spotlight__btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 14px 40px;
-    background: #fff;
-    color: var(--sp-bg, #e2682e);
+    display: inline-flex;
+    align-items: center;
+    gap: .6em;
+    margin-top: 6px;
+    color: #fff;
     text-decoration: none;
-    font-size: .9375rem;
-    letter-spacing: .08em;
-    border-radius: 2px;
-    transition: opacity .25s, transform .25s;
+    font-size: .875rem;
+    letter-spacing: .1em;
   }
-  .home-spotlight__btn:hover {
-    opacity: .88;
-    transform: translateY(-1px);
+  .home-spotlight__btn-text {
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, .45);
+    transition: border-color .25s;
+  }
+  .home-spotlight__btn:hover .home-spotlight__btn-text {
+    border-color: #fff;
+  }
+  .home-spotlight__arrow {
+    transition: transform .25s;
+  }
+  .home-spotlight__btn:hover .home-spotlight__arrow {
+    transform: translateX(4px);
   }
 {% endstylesheet %}
 
@@ -90,7 +102,7 @@
     { "type": "textarea", "id": "text", "label": "Text", "default": "色とりどりの手吹きガラス。あなたの暮らしに、ヴェネチアの光を。" },
     { "type": "text", "id": "button_label", "label": "Button label", "default": "コレクションを見る" },
     { "type": "url", "id": "button_link", "label": "Button link" },
-    { "type": "color", "id": "bg_color", "label": "Background color", "default": "#e2682e" },
+    { "type": "color", "id": "bg_color", "label": "Background color", "default": "#d97a40" },
     { "type": "range", "id": "padding_top", "min": 0, "max": 160, "step": 4, "unit": "px", "label": "Padding top", "default": 72 },
     { "type": "range", "id": "padding_bottom", "min": 0, "max": 160, "step": 4, "unit": "px", "label": "Padding bottom", "default": 72 }
   ],
