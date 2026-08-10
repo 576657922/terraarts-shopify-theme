@@ -1,12 +1,13 @@
 {%- comment -%}
   Terra Arts: ABASK 风格的橘色 Spotlight 版块(type-forward, 进店 CTA)。
-  全站唯一高饱和色,作视觉锚点。橘色集中在 --sp-bg。
+  全站唯一高饱和色,作视觉锚点。橘色本身定义在配色方案 scheme-9(设定 > 色),
+  这里只引用,不再单独持有色值 —— 改橘色请改 scheme-9。
 {%- endcomment -%}
 {%- assign s = section.settings -%}
 
 <section
-  class="home-spotlight"
-  style="--sp-bg: {{ s.bg_color }}; --sp-pt: {{ s.padding_top }}px; --sp-pb: {{ s.padding_bottom }}px;"
+  class="home-spotlight color-{{ s.color_scheme }}"
+  style="--sp-pt: {{ s.padding_top }}px; --sp-pb: {{ s.padding_bottom }}px;"
 >
   <div class="home-spotlight__inner page-width">
     {%- if s.eyebrow != blank -%}
@@ -29,8 +30,8 @@
 
 {% stylesheet %}
   .home-spotlight {
-    background-color: var(--sp-bg, #d97a40);
-    color: #fff;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
     padding-block: var(--sp-pt, 104px) var(--sp-pb, 104px);
     text-align: center;
   }
@@ -50,6 +51,7 @@
     opacity: .7;
   }
   .home-spotlight__heading {
+    color: var(--color-foreground-heading);
     font-family: var(--font-heading--family, serif);
     font-weight: 500;
     font-size: clamp(1.75rem, 3.6vw, 3rem);
@@ -72,18 +74,18 @@
     align-items: center;
     gap: .6em;
     margin-top: 6px;
-    color: #fff;
+    color: var(--color-foreground);
     text-decoration: none;
     font-size: .875rem;
     letter-spacing: .1em;
   }
   .home-spotlight__btn-text {
     padding-bottom: 5px;
-    border-bottom: 1px solid rgba(255, 255, 255, .45);
+    border-bottom: 1px solid color-mix(in srgb, currentColor 45%, transparent);
     transition: border-color .25s;
   }
   .home-spotlight__btn:hover .home-spotlight__btn-text {
-    border-color: #fff;
+    border-color: currentColor;
   }
   .home-spotlight__arrow {
     transition: transform .25s;
@@ -102,7 +104,7 @@
     { "type": "textarea", "id": "text", "label": "Text", "default": "色とりどりの手吹きガラス。あなたの暮らしに、ヴェネチアの光を。" },
     { "type": "text", "id": "button_label", "label": "Button label", "default": "コレクションを見る" },
     { "type": "url", "id": "button_link", "label": "Button link" },
-    { "type": "color", "id": "bg_color", "label": "Background color", "default": "#d97a40" },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-9" },
     { "type": "range", "id": "padding_top", "min": 0, "max": 160, "step": 4, "unit": "px", "label": "Padding top", "default": 72 },
     { "type": "range", "id": "padding_bottom", "min": 0, "max": 160, "step": 4, "unit": "px", "label": "Padding bottom", "default": 72 }
   ],
